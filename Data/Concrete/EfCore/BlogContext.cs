@@ -16,10 +16,7 @@ namespace BlogApp.Data.Concrete.EfCore
         public DbSet<Tag> tags { get; set; }
 
 
-        public DbSet<PostComment> PostComments { get; set; }
         public DbSet<PostTag> PostTags { get; set; }
-        public DbSet<UserComment> userComments { get; set; }
-        public DbSet<UserPost> userPosts { get; set; }
 
 
 

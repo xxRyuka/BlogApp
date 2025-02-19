@@ -1,7 +1,19 @@
+using BlogApp.Data.Concrete.EfCore;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<BlogContext>(options => {
+
+
+var config = builder.Configuration;
+var connection = config.GetConnectionString("sql_connection");
+options.UseSqlite(connectionString: connection);
+}
+);
 
 var app = builder.Build();
 
