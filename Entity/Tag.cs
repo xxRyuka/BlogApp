@@ -10,7 +10,7 @@ namespace BlogApp.Entity
         //Relations
 
         //many to mant tag-posts
-        public ICollection<Post> Posts { get; set; } = new List<Post>();
+        public ICollection<PostTag> PostTags { get; set; } = new List<PostTag>();
 
     }
 

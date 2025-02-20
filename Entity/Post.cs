@@ -21,7 +21,7 @@ namespace BlogApp.Entity
         public User User { get; set; } = null!;
 
        // many to many post - tag 
-       public ICollection<Tag> Tags { get; set; } = new List<Tag>();
+       public ICollection<PostTag> PostTags { get; set; } = new List<PostTag>();
 
        //one to many post-comment
        public ICollection<Comment> Comments { get; set; }= new List<Comment>();
